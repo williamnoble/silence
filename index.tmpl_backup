@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Quiet HN</title>
+    <meta name="Description" content="A quieter approach to Hacker News. Links and nothing else." />
+
+</head>
+<body class="flex h-screen bg-gray-600">
+
+    <div class="mx-auto px-10">
+    <h1>Quiet Hacker News</h1>
+
+        {{ range $key, $value := . }}
+            <li class="text-3xl w-120 text-x1 text-gray-400 list-none rounded-lg px-3 py-3 mb-5 mt-5 hover:bg-gray-700">
+                <div > <a href="{{ $value.URL }}" target="_blank" rel="noopener noreferrer">{{ $value.Title }}</a></div>
+                <div class="text-x1 text-gray-500">{{ $value.Host }}</div>
+            </li>
+        {{ end }}
+
+    <p>
+        <br>
+        <a href="https://github.com/fuzzingbits/quiet-hacker-news" target="_blank" rel="noopener noreferrer">Source Code</a>
+    </p>
+    </div>
+
+</body>
+</html>
+

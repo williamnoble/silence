@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <title>Title</title>
+
+</head>
+
+
+
+
+
+
+<body class="flex h-screen bg-gray-600">
+    <div x-data="{h: false}" class=" mx-auto px-10">
+        <h1>Quiet Hacker News</h1>
+        <div @mouseover="h = true" @mouseout="h = false"
+            class="flex flex-row hover:bg-gray-700 p-6 my-8 rounded-lg items-center">
+            <li class="text-3xl w-110 text-x1 text-gray-400 list-none  ">
+                <div><a href="http://www.blank.com" target="_blank" rel="noopener noreferrer">The
+                        Trials and Tribusddslations of Man</a></div>
+                <div class="text-x1 text-gray-500"> <span></span>iknosdsdswsit.com</span></div>
+
+            </li>
+            <div class="text-3xl flex w-20 m">
+                <button x-show="h" class="
+                    text-3xl ml-6 px-3 font-medium rounded h-14 w-14 
+                    bg-gray-600 border-2 border-red-100 
+                    text-primary-100 text-white hover:text-white 
+                    hover:bg-red-700">
+                    Y
+                </button>
+
+            </div>
+
+
+
+
+        </div>
+
+        <!-- "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSIxNzkyIiB2aWV3Qm94PSIwIDAgMTc5MiAxNzkyIiB3aWR0aD0iMTc5MiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOTM3IDEwMDRsMjY2LTQ5OWgtMTEybC0xNTcgMzEycS0yNCA0OC00NCA5MmwtNDItOTItMTU1LTMxMmgtMTIwbDI2MyA0OTN2MzI0aDEwMXYtMzE4em03MjctNTg4djk2MHEwIDExOS04NC41IDIwMy41dC0yMDMuNSA4NC41aC05NjBxLTExOSAwLTIwMy41LTg0LjV0LTg0LjUtMjAzLjV2LTk2MHEwLTExOSA4NC41LTIwMy41dDIwMy41LTg0LjVoOTYwcTExOSAwIDIwMy41IDg0LjV0ODQuNSAyMDMuNXoiLz48L3N2Zz4=" -->
+
+
+
+
+    </div>
+
+    </div>
+    </div>
+</body>
+
+</html>

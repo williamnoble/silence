@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <title>Quiet HN</title>
+    <meta name="Description" content="A quieter approach to Hacker News. Links and nothing else." />
+
+</head>
+<body class="flex h-screen bg-gray-600">
+    <div class="mx-auto px-10">
+        {{/*        Title*/}}
+        <div class="text-4xl mx-auto mt-6 mb-3 text-center text-yellow-600">Silence. <span class="text-xl text-gray-400">browse HN in silence</span></div>
+        {{ range $key, $value := .TopStories }}
+
+        <div>
+            <div x-data="{h: false}" @mouseover="h = true" @mouseout="h = false"
+                 class="flex hover:bg-gray-700 p-6 my-8 rounded-lg items-center justify-between w-180
+                    border-transparent border-b-2 hover:border-solid hover:border-gray-400
+                ">
+                <li class="text-3xl m-w-180 text-x1 text-gray-400 list-none">
+                    <div class="hover:text-gray-300"> <a href="{{ $value.URL }}" target="_blank" rel="noopener noreferrer">{{ $key}} - {{ $value.Title }}</a></div>
+                    <div class="text-x1 text-gray-500">{{ $value.Host }}</div>
+                </li>
+                <div class="text-3xl flex w-20 m">
+                    <button x-show="h" class="
+                    text-3xl ml-6 px-3 font-medium rounded h-14 w-14
+                    bg-gray-700 border-2 border-gray-400 text-gray-600
+                    text-primary-100 text-blue hover:text-yellow-600
+                    ">
+                        <a href="{{ $value.Link }}" target="_blank" rel="noopener noreferrer">Y</a>
+                    </button>
+
+                </div>
+
+
+
+            </div>
+        </div>
+        {{ end }}
+
+        <div class="flex mx-auto center-items justify-center list-none mb-12">
+            <div class="font-black text-gray-400 text-4xl  p6 mx-5 hover:text-gray-300">
+                <a href="http://localhost:8000/?page={{.NextPage}}"><svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg></a>
+            </div>
+        </div>
+
+
+        <div class="text-xl mx-auto mt-15 mb-3 text-center text-yellow-600">Built by William Noble<span class="text-xl text-gray-400"> GITHUB</span></div>
+
+    </div>
+
+
+    </div>
+
+</body>
+</html>
+

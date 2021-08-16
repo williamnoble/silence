@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <title>Title</title>
+
+</head>
+
+<body class="flex h-screen bg-gray-600">
+    <div class="mx-auto px-10">
+        <!-- Title -->
+        <div class="text-4xl mx-auto text-center mt-6 text-gray-400">Hacker New Clone</div>
+
+        <!-- Div -->
+        <div x-data="{h: false}" @mouseover="h=true" @mouseout="h = false"
+            class="flex hover:bg-gray-700 p-6 my-8 rounded-lg items-center justify-between w-180">
+            <li class="text-3xl  text-x1 text-gray-400 list-none ">
+                <div><a href="http://www.blank.com" target="_blank" rel="noopener noreferrer">The
+                        Trials and Tribulations of Man</a></div>
+                <div class="text-x1 text-gray-500"> <span></span>iknowsit.com</span></div>
+
+            </li>
+            <div class="text-3xl text-yellow-400 flex w-20 content-end">
+                <button x-show="h"
+                    class="ml-6 px-3 rounded h-14 w-14 bg-gray-600 border-yellow-400 text-primary-100 hover:text-white hover:bg-green-700">
+                    <div x-show="h">Y</div>
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Div -->
+        <div x-data="{h: false} @mouseover=" h=true" @mouseout="h = false"
+            class="flex flex-row hover:bg-gray-700 p-6 my-8 rounded-lg items-center w-180">
+            <li class="text-3xl  text-x1 text-gray-400 list-none  ">
+                <div><a href="http://www.blank.com" target="_blank" rel="noopener noreferrer">The
+                        Trials and Tribulations of Man On a Very Long Sentence</a></div>
+                <div class="text-x1 text-gray-500"> <span></span>iknowsit.com</span></div>
+
+            </li>
+            <div class="text-3xl text-yellow-400 flex w-20 m">
+                <button x-show="h"
+                    class="ml-6 px-3 font-medium rounded h-14 w-14 leading-5 bg-gray-600 text-primary-100 text-white hover:text-white hover:bg-green-700">
+
+                    Y
+                </button>
+
+            </div>
+
+
+
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
